@@ -1,0 +1,78 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Dieses Gerät und dieser Ordner sind bereits eingerichtet.",
+      "reauth_successful": "Die erneute Anmeldung war erfolgreich.",
+      "smb_not_yet_supported": "Die Verbindung über SMB wird noch nicht unterstützt.",
+      "unknown": "Unerwarteter Fehler.",
+      "wrong_account": "Dieses WD-Konto besitzt das eingerichtete Gerät nicht. Bitte mit dem ursprünglichen Konto anmelden."
+    },
+    "error": {
+      "api_gone": "Die WD-Cloud-API ist nicht mehr erreichbar. WD hat sie möglicherweise eingestellt.",
+      "cannot_connect": "Verbindung zum WD-Cloud-Dienst nicht möglich.",
+      "cannot_create_folder": "Der Ordner konnte nicht gefunden oder angelegt werden.",
+      "invalid_folder": "Gib einen Ordnerpfad wie `HA_Backup` oder `Backups/HA` an. Leere Pfade sowie `.`- oder `..`-Segmente sind nicht erlaubt.",
+      "invalid_auth": "Ungültige E-Mail-Adresse oder ungültiges Passwort.",
+      "no_devices": "Für dieses Konto wurden keine My-Cloud-Geräte gefunden."
+    },
+    "step": {
+      "user": {
+        "title": "WD My Cloud",
+        "description": "Wie möchtest du dich verbinden?",
+        "menu_options": {
+          "wd_account": "WD-Konto (Cloud-Anmeldung)",
+          "smb": "SMB-Netzwerkfreigabe (noch nicht verfügbar)"
+        }
+      },
+      "wd_account": {
+        "title": "WD-Konto",
+        "description": "Melde dich mit deinem WD-My-Cloud-Konto an. Hinweis: Dies nutzt eine inoffizielle WD-API, die WD jederzeit einstellen kann. Das Passwort wird nur für diese Anmeldung verwendet und nicht gespeichert; gespeichert wird nur ein Refresh-Token.",
+        "data": {
+          "email": "E-Mail",
+          "password": "Passwort"
+        }
+      },
+      "device": {
+        "title": "Gerät auswählen",
+        "data": {
+          "device": "Gerät"
+        }
+      },
+      "folder": {
+        "title": "Backup-Ordner",
+        "description": "Ordner auf dem Gerät, in dem die Backups liegen. Er wird angelegt, falls er fehlt; verschachtelte Pfade wie `Backups/HA` sind erlaubt.",
+        "data": {
+          "folder": "Ordner"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Erneut anmelden",
+        "description": "Die WD-Anmeldung ist abgelaufen. Melde dich erneut mit demselben Konto an. Das Passwort wird nicht gespeichert.",
+        "data": {
+          "email": "E-Mail",
+          "password": "Passwort"
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "api_gone": {
+      "message": "Die WD-Cloud-API ist nicht verfügbar. WD hat sie möglicherweise eingestellt."
+    },
+    "cannot_connect": {
+      "message": "Verbindung zum WD-Cloud-Dienst nicht möglich."
+    },
+    "device_not_found": {
+      "message": "Das eingerichtete Gerät wurde im WD-Konto nicht gefunden."
+    },
+    "invalid_auth": {
+      "message": "WD-Anmeldung fehlgeschlagen. Bitte erneut anmelden."
+    }
+  },
+  "issues": {
+    "api_gone": {
+      "title": "API von WD abgeschaltet",
+      "description": "WD hat die Cloud-API für My Cloud Home abgeschaltet, die diese Integration nutzt. Backups auf dieses Ziel funktionieren daher nicht mehr. Nutze die lokale SMB-Option, sobald sie verfügbar ist, und lies die README für Details."
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "domain": "wd_mycloud",
+  "name": "WD My Cloud",
+  "codeowners": ["@Jetschin"],
+  "config_flow": true,
+  "dependencies": ["backup"],
+  "documentation": "https://github.com/Jetschin/ha-wd-mycloud",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Jetschin/ha-wd-mycloud/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

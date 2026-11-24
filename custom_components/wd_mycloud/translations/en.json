@@ -1,0 +1,78 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This device and folder are already configured.",
+      "reauth_successful": "Re-authentication was successful.",
+      "smb_not_yet_supported": "Connecting via SMB is not supported yet.",
+      "unknown": "Unexpected error.",
+      "wrong_account": "This WD account does not own the configured device. Sign in with the original account."
+    },
+    "error": {
+      "api_gone": "The WD cloud API is no longer available. WD may have discontinued it.",
+      "cannot_connect": "Cannot connect to the WD cloud service.",
+      "cannot_create_folder": "The folder could not be found or created.",
+      "invalid_folder": "Enter a folder path such as `HA_Backup` or `Backups/HA`. Empty paths and `.` or `..` segments are not allowed.",
+      "invalid_auth": "Invalid e-mail or password.",
+      "no_devices": "No My Cloud devices were found for this account."
+    },
+    "step": {
+      "user": {
+        "title": "WD My Cloud",
+        "description": "How do you want to connect?",
+        "menu_options": {
+          "wd_account": "WD account (cloud login)",
+          "smb": "SMB network share (not yet available)"
+        }
+      },
+      "wd_account": {
+        "title": "WD account",
+        "description": "Sign in with your WD My Cloud account. Note that this uses an unofficial WD API that WD may discontinue at any time. Your password is used only for this login and is not stored; only a refresh token is kept.",
+        "data": {
+          "email": "E-mail",
+          "password": "Password"
+        }
+      },
+      "device": {
+        "title": "Select device",
+        "data": {
+          "device": "Device"
+        }
+      },
+      "folder": {
+        "title": "Backup folder",
+        "description": "Folder on the device where backups are stored. It is created if it does not exist; nested paths such as `Backups/HA` are allowed.",
+        "data": {
+          "folder": "Folder"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "Your WD login expired. Sign in again with the same account. Your password is not stored.",
+        "data": {
+          "email": "E-mail",
+          "password": "Password"
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "api_gone": {
+      "message": "The WD cloud API is not available. WD may have discontinued it."
+    },
+    "cannot_connect": {
+      "message": "Cannot connect to the WD cloud service."
+    },
+    "device_not_found": {
+      "message": "The configured device was not found in the WD account."
+    },
+    "invalid_auth": {
+      "message": "WD authentication failed. Please sign in again."
+    }
+  },
+  "issues": {
+    "api_gone": {
+      "title": "API switched off by WD",
+      "description": "WD has switched off the My Cloud Home cloud API that this integration uses, so backups to this target no longer work. Use the local SMB option once it is available, and see the README for details."
+    }
+  }
+}
